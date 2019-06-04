@@ -1,0 +1,79 @@
+body, td, th {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+th {
+	background: url(#{resource['imagens:fundo_claro.png']}); 
+	min-height: 25px;
+	padding: 3px;
+}
+
+img {
+	border:0px;
+}
+
+#container {
+	width: 950px;
+	height: 100%;
+	margin: 0 auto
+}
+	
+#titulo {
+	float: left;
+	font-size: 25pt;
+	font-variant: small-caps;
+	font-weight: bold;
+}
+
+#barra_menu {
+	background: #CCB337 repeat-x; 
+	min-height: 25px;
+	padding: 3px;
+	clear:both;
+}
+
+#corpo {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	min-height: 300px;
+}
+
+#rodape {
+	background: #CCB337 repeat-x;
+	height: 100px;
+	margin-top: 5px;
+	padding: 10px;
+	text-align: center;
+}
+
+.info {
+	font-weight: bold;
+	color: green;
+}
+
+.warn {
+	font-weight: bold;
+	color: #FFCC00;
+}
+
+.fatal, .error {
+	font-weight: bold;
+	color: red;
+}
+
+.c1 {
+	margin: 0 auto;
+}
+
+.c2 {
+	margin: 0 auto;
+}
+
+.c3 {
+	margin: 0 auto;
+}
+
+.c4 {
+	margin: 0 auto;
+}
