@@ -3,7 +3,7 @@
 	<!-- Configuração do Spring Framework contendo uma referência ao DataSource JNDI -->
 	<bean id="financeiroDataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
 		<property name="jndiName">
-			<value>java:/comp/env/jdbc/FinanceiropapwDB</value>
+			<value>java:/comp/env/jdbc/heroku_f66474220792d80</value>
 		</property>
 	</bean>
 </beans>
