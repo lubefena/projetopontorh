@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<ui:composition>
+	<h:form id="edicao">
+		<h:messages />
+		<h:inputHidden value="#{registroBean.editado.registro}" />
+		
+		<!-- A tag "panelGrid columns = 2" criará 2 colunas em uma mesma linha com os valores expressos pelo "outputLabel" -->
+		<h:panelGrid columns="2"> 
+			
+			<h:outputText value="Data" for="data" />
+			<h:outputText value="Descrição" for="descricao" />
+			
+			<p:row>
+				<!-- A tag "calendar" irá exibir um calendário no campo data, cujo padrão segue a seguinte ordem "dd/MM/yyyy HH:mm:ss" -->
+				<p:calendar id="data" value="#{registroBean.editado.data}" pattern="dd/MM/yyyy HH:mm:ss" size="15" />
+			</p:row>
+			<p:row>	
+				<!-- A tag "inputText id=descricao" irá exibir um campo de texto para inserção da informação do lançamento -->
+				<h:inputText id="descricao" value="#{registroBean.editado.descricao}" required="true" size="45" />
+			</p:row>	
+		</h:panelGrid>
+		<br/>
+		<p:commandButton value="Novo" action="#{registroBean.novo}" process="@this" update=":edicao" /> <!-- A tag "process = @this" não realizará a validação do formulário e consequentemente o envio das suas informações -->
+		<p:commandButton value="Salvar" action="#{registroBean.salvar}" update=":listagem, :edicao" />
+	</h:form>
+</ui:composition>
+</html>

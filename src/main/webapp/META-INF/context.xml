@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context reloadable="true">
-	<!-- Configuração do DataSource JNDI com o nome jdbc/financeiro -->		
-	<Resource name="jdbc/heroku_f66474220792d80" 
+	<!-- Configuração do DataSource JNDI com o nome jdbc/pontorh -->		
+	<Resource name="jdbc/pontorh" 
 			  auth="Container" 
 			  type="javax.sql.DataSource"
 		      maxActive="100" 
 		      maxIdle="30" 
 		      maxWait="10000" 
-		      username="bf794cfc9b9032" 
-		      password="7f0884c2"
+		      username="root" 
+		      password=""
 		      driverClassName="com.mysql.jdbc.Driver"
-		      url="jdbc:mysql://us-cdbr-iron-east-02.cleardb.net:3306/heroku_f66474220792d80?reconnect=true" />
+		      url="jdbc:mysql://localhost:3306/pontorh?autoReconnect=true" />
 	<!-- "maxActive" Número máximo de conexões em uso -->
 	<!-- "maxIdle" Número máximo de conexões aguardando uso -->
 	<!-- "maxWait" Tempo máximo de espera por uma conexão disponível -->

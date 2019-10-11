@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<ui:composition>
+	<h:form id="listagem">
+		<!-- A tag "dataTable" possui os atributos "scrollable" que habilita a barra de rolagem, "scrollHeight" que delimita o espaço da barra de rolagem 
+		e o "rowIndexVar" que define uma variável que terá o índice da linha que está sendo processada. -->
+		<p:dataTable scrollable="true" scrollHeight="200" value="#{registroBean.lista}" var="registro" rowIndexVar="index">
+			
+			<p:column style="width:15px">
+				<p:commandLink action="#{registroBean.editar}" update=":edicao">
+					<h:graphicImage library="imagens" name="editar16.png" />
+					<f:setPropertyActionListener target="#{registroBean.editado}" value="#{registro}" />
+				</p:commandLink>
+			</p:column>
+			
+			<p:column style="width:15px">
+				<p:commandLink action="#{registroBean.excluir}" update=":listagem"
+					onclick="if (!confirm('Confirma a exclusão do registro #{registro.descricao}?')) return false;">
+					<h:graphicImage library="imagens" name="excluir16.png" />
+					<f:setPropertyActionListener target="#{registroBean.editado}" value="#{registro}" />
+				</p:commandLink>
+			</p:column>
+			
+			<p:column style="width:140px">
+				<f:facet name="header">Data</f:facet>
+				<h:outputText value="#{registro.data}">
+					<f:convertDateTime pattern="dd/MM/yyyy HH:mm:ss" />
+				</h:outputText>
+			</p:column>
+			
+			<p:column style="width:320px">
+				<f:facet name="header">Descrição</f:facet>
+				<h:outputText value="#{registro.descricao}" />
+			</p:column>
+			
+		</p:dataTable>
+	</h:form>
+</ui:composition>
+</html>

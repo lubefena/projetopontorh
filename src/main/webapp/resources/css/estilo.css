@@ -27,7 +27,7 @@ img {
 }
 
 #barra_menu {
-	background: #CCB337 repeat-x; 
+	background: #d3d3d3 repeat-x; 
 	min-height: 25px;
 	padding: 3px;
 	clear:both;
@@ -40,7 +40,7 @@ img {
 }
 
 #rodape {
-	background: #CCB337 repeat-x;
+	background: #d3d3d3 repeat-x;
 	height: 100px;
 	margin-top: 5px;
 	padding: 10px;

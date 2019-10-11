@@ -6,7 +6,7 @@
 	<session-factory>
 		<!-- Configuração da conexão com o banco MySQL e dialeto -->
 		<property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
-		<property name="connection.datasource">java:/comp/env/jdbc/heroku_f66474220792d80</property>
+		<property name="connection.datasource">java:/comp/env/jdbc/pontorh</property>
 		<property name="current_session_context_class">thread</property> <!-- Essa propriedade com o valor thread, indica que a sessão atual do Hibernate (current session) deve ser diferente a cada nova Thread -->
 		<property name="hibernate.hbm2ddl.auto">update</property> <!-- Essa propriedade com o valor update, criará automaticamente a estrutura das tabelas nas classes de persistência mapeadas -->
 		<!-- Usando as configurações do C3PO para pool de conexões -->
@@ -21,9 +21,6 @@
 		<property name="generate_statistics">true</property>
 		<property name="use_sql_comments">true</property>
 		
-		<mapping class="br.com.financeiropapw.usuario.Usuario"/> <!-- Comunicação da existencia da classe Usuario ao Hibernate -->
-		<mapping class="br.com.financeiropapw.conta.Conta"/> <!-- Comunicação da existencia da classe Conta ao Hibernate -->
-		<mapping class="br.com.financeiropapw.categoria.Categoria"/> <!-- Comunicação da existencia da classe Categoria ao Hibernate -->
-		<mapping class="br.com.financeiropapw.lancamento.Lancamento"/> <!-- Comunicação da existencia da classe Lancamento ao Hibernate -->
+		<mapping class="br.com.pontorh.registro.Registro" /> <!-- Comunicação da existencia da classe Registro ao Hibernate -->
 	</session-factory>
 </hibernate-configuration>

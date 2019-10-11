@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
-	<!-- Configuração do Spring Framework contendo uma referência ao DataSource JNDI -->
-	<bean id="financeiroDataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
-		<property name="jndiName">
-			<value>java:/comp/env/jdbc/heroku_f66474220792d80</value>
-		</property>
-	</bean>
-</beans>

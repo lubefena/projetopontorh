@@ -4,7 +4,7 @@
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title><ui:insert name="titulo">Financeiro</ui:insert></title>
+	<title><ui:insert name="titulo">PontoRH</ui:insert></title>
 	<h:outputStylesheet library="css" name="estilo.css" />
 	<style type="text/css">
 <!--
@@ -18,14 +18,11 @@
 <h:body>
 	<div id="container">
 		<div id="titulo">
-			<ui:insert name="titulo">Financeiro</ui:insert>
-		</div>
-		<div id="logotipo">
-			<h:graphicImage library="imagens" name="logotipo_m.png" />
+			<ui:insert name="titulo">PontoRH</ui:insert>
 		</div>
 		<div id="barra_menu">
 			<ui:insert name="barra_menu">
-				<ui:include src="/restrito/menu_sistema.xhtml" />
+				<ui:include src="/publico/menu_sistema.xhtml" />
 			</ui:insert>
 		</div>
 		<div id="corpo">
